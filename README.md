@@ -9,7 +9,17 @@ dan kita "output_path" sebagai hasil yang akan dikeluarkan
 "input = Image.open(input_path)" untuk mendeklarasikan si gambar tersebut kedalam input yang nanti akan diproses pada
 "output = remove(input)" nah input disini akan diproses untuk dihilangkan latar belakangnya dengan perintah remove
 plt.imshow(output) untuk menampilkan hasil dari si output tersebut
-output.save(output_path) = untuk menyimpan hasil yang didapatkan kedalam devie kita
+output.save(output_path) = untuk menyimpan hasil yang didapatkan kedalam device kita
+
+nah itu kalau menggunakan library atau git dari fungsi rembg
+
+yang kedua ada yang manual yaitu pertama dengan membuat fungsi untuk menghapus background "remove_background"
+lalu mengubah warna RGB kedalam HUE karena format ini lebih mudah merincikan suatu objek
+setelah itu menentukan rentang warna pada objek, lalu masking objek yang dibuat 
+lalu melakukan morph atau morpologi untuk membersihkan mask
+terakhir balikkan antara mask dengan latar.
+maka kita bisa memanggil si fungsi remove_background untuk menghilangkan si background dari objek yang kita dapatkan
+
 
 Background Subtraction
 Background subtraction atau nama lainnya adalah foreground detection
